@@ -18,9 +18,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-In this tutorial you'll explore the RStudio interface and try out basic R functions.  This will help you learn what R is and how it works in preparation for processing your data from Lab 1.  
+In this tutorial you'll explore the RStudio interface and try out basic R functions.  This will help you learn what R is and how it works to help prepare you for Lab 1.  
 
-Put very simply, you write *code* in the form of text commands and ask R to run it.  Once it's finished running, R gives you the output (answers) you've asked for.  For this exercise, you'll write R code in the interactive Code boxes.  You can ask R to run the code by pressing the **Run Code** or **Submit Answer** button.  (Run Code simply runs the code; submit answer runs it and checks to see if it's correct, so use this option when available.)
+Put very simply, you write *code* in the form of text commands and ask R to run it.  Once it's finished running, R gives you the output (answers) you've asked for.  For example, to create an x,y plot of 1, 2, 3 and 4, 5, 6, you would run the following code:
+
+```{r}
+x = c(1, 2, 3)
+y = c(4, 5, 6)
+plot(x, y)
+```
+
+
+For this exercise, you'll write R code in interactive Code boxes.  You can ask R to run the code by pressing the **Run Code** or **Submit Answer** button.  (Run Code simply runs the code; submit answer runs it and checks to see if it's correct, so use this option when available.)
 
 ## R is a Calculator
 
@@ -70,7 +79,9 @@ One of the most basic features of R, or any programming language, is the ability
 A <- pi*3^2
 ```
 
-Here, we've calculated the area of the circle using $\pi r^2$ and saved it as a variable `A` using R's *assignment operator*, `<-`.  (This is the proper assignment operator, but you'll find the equals sign, `=`, usually works the same.)  We can now access the variable at any point later in our code.  So if we wanted to calculate the volume of a cylinder that has that circle as the base, we could just call `A`.  Let's say the cylinder is 10 cm tall:
+Here, we've calculated the area of the circle using $\pi r^2$ and saved it as a variable `A` using R's *assignment operator*, `<-`.  (This is the proper assignment operator, but you'll find the equals sign, `=`, usually works the same.)  
+
+We can now access the variable at any point later in our code.  So if we wanted to calculate the volume of a cylinder that has that circle as the base, we could just call `A`.  Let's say the cylinder is 10 cm tall:
 
 ```{r volume, echo = TRUE}
 # V = Ah
@@ -79,7 +90,7 @@ V = A*10
 
 This time, we've calculated the volume with the stored value of `A` (the area of the base) and multiplied it by the height of the cylinder (10cm) to get the volume, which has been stored as `V`.
 
-Note that R doesn't automatically print the result to the screen, even though it stores in memory.  To see the contents of `V` we type `V` into a prompt.
+Note that R doesn't necessarily print the result to the screen, even though it stores in memory.  To see the contents of `V` we type `V` into a prompt.
 
 ### TASK: Call `V` and check to see that the volume seems correct:
 
@@ -95,7 +106,7 @@ V
 grade_code("Does the volume seem correct?")
 ```
 
-When we save a variable in memory, it's stored in our current *R environment*, sometimes called a *workspace*.  The workspace will hold the variable until you close R or purposefully empty the workspace.
+When we save a variable in memory, it's stored in our current *R environment*, sometimes called a *workspace*.  The workspace will hold the variable until you close R or purposefully empty the workspace.  If you ever want to clear the workspace, use the remove command: `rm(list = ls())`.
 
 ### TASK: Assign the numeric value `8` to the variable `x` and then display x:
 
@@ -141,7 +152,11 @@ question("Which is the assignment operator in R",
 
 ## Functions
 
-When you write R code, you use R *functions* that are built into the language.  The function tells R what to do, and R won't do anything without one.  Typically, functions are represented as `function_name(function_arguments)`.  The *arguments* are options you specify that tell the function what to work on and/or how work.  This is similar to the concept of an algebraic function, e.g. $f(x)=2x$.  Here, $f$ is the function name and $x$ is the argument.  When we write $f(4)$, we're saying we wish to substitute $4$ for $x$, as in $f(4) = 2 \times 4 = 8$.  The same is true of functions in R.  We might create a function `timesTwo(x)` that multiplies any `x` by 2, such that `timesTwo(4)` yields the result `8`.
+When you write R code, you use R *functions* that are built into the language.  The function tells R what to do, and R won't do anything without one.  Typically, functions are represented as `function_name(function_arguments)`.  The *arguments* are options you specify that tell the function what to work on and/or how work.  
+
+This is similar to the concept of an algebraic function, e.g. $f(x)=2x$.  Here, $f$ is the function name and $x$ is the argument.  When we write $f(4)$, we're saying we wish to substitute $4$ for $x$, as in $f(4) = 2 \times 4 = 8$.  
+
+The same is true of functions in R.  We might create a function `timesTwo(x)` that multiplies any `x` by 2, such that `timesTwo(4)` yields the result `8`.
 
 ### Task: Use the function `log10()` to calculate the base-10 logarithm of 10 000.
 
@@ -202,9 +217,9 @@ question("What is the syntax of a function in R?",
 
 ## Vectors, Scalars, and Matrices
 
-Vectors are of central importance in R.  A vector is just a 1-dimensional list of numbers (e.g. vector = [1, 3, 7, 3, 9]).  These numbers can be arranged either in a single row (row vector, 1 x *n*) or a single column (column vector, *n* x 1).  In R, vectors are assigned using the function `c()`.  The c stands for "combine values into a vector".
+Vectors are of central importance in R.  A vector is just a 1-dimensional list of numbers.  For example, if $x = [1, 3, 7, 3, 9]$, then $x$ is a 5-element vector.  These numbers can be arranged either in a single row (row vector, 1 x *n*) or a single column (column vector, *n* x 1).  In R, vectors are assigned using the function `c()`.  The c stands for "combine values into a vector".
 
-#### TASK: Create a vector containing the numbers 4, 8, 3, 10, 12, and 2 in that order, then store it as `x` and display the result on the screen.
+#### TASK: Create a vector containing the numbers 4, 8, 3, 10, 12, and 2 in that order, then store it as `x` and display the result on the screen. (If you get a message about an invisible answer, it's because you didn't print the result to the screen.)
 
 ```{r vector, exercise = TRUE}
 
@@ -281,7 +296,7 @@ v
 v[2]
 ```
 
-Notice that the colon can be used to generate a sequence of numbers spaced by 1, which we used to create `v` (the numbers 10 through 20).  (The 1 in brackets at the beginning of the line just specifies that you're looking at the first row of output.)  You can see that `v[2]` extracted the second element of the vector (11).
+Notice that the colon can be used to generate a sequence of numbers spaced by 1, which was here used to create `v` (the numbers 10 through 20).  (The 1 in brackets at the beginning of the output just specifies that you're looking at the first row of output.)  You can see that `v[2]` extracted the second element of the vector (11).
 
 Of course, you can filter out multiple elements at once, as in `v[2:5]`.  You can even use logical statements to automatically filter elements, such as `v[v > 15]`.
 
@@ -316,7 +331,9 @@ question("Which of the following would select the 12th element from `b`?",
 
 ## Data Frames
 
-R has a very powerful data format called a *data frame*.  These are data tables that are similar to Excel worksheets.  Just like Excel sheets, they contain columns of data, and each column must be the same *type*.  That is a column can contain numbers, text, factors, or even other data frames, but you cannot mix these types within a column.  Note however that you *can* mix times within a single data frame.  Most often, you'll use data frames to work with the data you generate in lab.  Data frames can be created with the `data.frame()` function.
+R has a very powerful data format called a *data frame*.  These are data tables that are similar to Excel worksheets, and is the most common method we'll use to interact with our data this semester.  Just like Excel sheets, they contain columns of data, and each column must be the same *type*.  That is, a column can contain numbers, text, factors, or even other data frames, but you cannot mix these types within a column.  Note however that you *can* mix types within a single data frame.  
+
+You'll use data frames to work with most of the data you generate in lab.  Data frames can be created with the `data.frame()` function.
 
 Here's a simple data frame showing a hypothetical sample of people, their height in centimeters, their age in years, and their favorite color:
 
@@ -334,9 +351,11 @@ people <- data.frame(
 people
 ```
 
-Note that each column in a data frame *must* be a vector.  Columns are separated by commas.  I've also used *comments* to specify things like units for each column.  Comments are indicated by a `#`; anything after the mark doesn't get read by R.  These can be used anywhere in R and are useful for describing your code and indicating units, formulae, etc.
+Note that each column in a data frame *must* be a vector.  Columns are separated by commas.  
 
-You can access the information in a data frame in several ways.  First, you can filter it by number just like we did with vectors.  We just use two values for indexing rather than one, as in `name_of_df[row, column]`.  To see the first two rows of the second column in `people`, we'd type:
+You'll also see *comments* used to specify things like units for each column.  Comments are indicated by a `#`; anything after the hash mark doesn't get read by R.  These can be used anywhere in R and are useful for describing your code, indicating units, listing formulae, etc.
+
+You can access the information in a data frame in several ways.  First, you can filter it by number just like we did with vectors.  Just use two values for indexing rather than one, as in `name_of_df[row, column]`.  To see the first two rows of the second column in `people`, we'd type:
 
 ```{r echo = TRUE}
 people[1:2, 2]
@@ -406,12 +425,12 @@ question("What is true of data frames? Select all that apply.",
 ```{r df-subset-quiz}
 question("Which are valid methods of subsetting a data frame named 'df'?",
   answer("df$column_name", correct = TRUE),
-  answer("df$row_name", correct = TRUE),
+  answer("df$row_name", correct = FALSE),
   answer("df[2, 5]", correct = TRUE),
   answer("df[2, 5:10]", correct = TRUE),
   answer("df[, 3]", correct = TRUE),
-  answer("df$column_name['row_name']"),
-  answer("df['columne_name']", correct = TRUE),
+  answer("df$column_name['row_name']", correct = FALSE),
+  answer("df['column_name']", correct = TRUE),
   incorrect = "No, try again.",
   allow_retry=TRUE,
   random_answer_order = TRUE
@@ -421,4 +440,4 @@ question("Which are valid methods of subsetting a data frame named 'df'?",
 
 ## Conclusion
 
-Much like learning to speak a new language, learning a programming language like R takes time and practice.  What you've seen here is the first layer of getting comfortable executing commands and learning the basic concepts of R programming.  We'll practice and build upon these concepts while processing your data from lab next week, so make sure you're beginning to understand them.  We'll specifically work more with data frames and learn to import data, perform arithmetic on vectors, and prepare high-quality plots from the data.
+Much like learning to speak a new language, learning a programming language like R takes time and practice.  What you've seen here is the first layer of getting comfortable executing commands (functions) and learning the basic concepts of R programming.  We'll practice and build upon these concepts while processing your data from lab next week, so make sure you're beginning to understand them.  We'll specifically work more with data frames and learn to import data, perform arithmetic on vectors, and prepare high-quality plots from the data.
