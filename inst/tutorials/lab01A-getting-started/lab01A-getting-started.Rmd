@@ -4,6 +4,7 @@ output:
   learnr::tutorial:
     progressive: true
 runtime: shiny_prerendered
+description: Start becoming familiar with R.
 ---
 
 ```{r setup, include=FALSE}

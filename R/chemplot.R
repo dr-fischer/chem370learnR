@@ -1,4 +1,3 @@
-require(magicaxis)
 
 chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
           minorn = "auto", tcl = 0.5, ratio = 0.5, labels = TRUE, unlog = "auto",
@@ -6,12 +5,12 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
           logpretty = TRUE, prettybase = 10, powbase = 10, hersh = FALSE,
           family = "sans", frame.plot = TRUE, usepar = FALSE, grid = FALSE,
           grid.col = "grey", grid.lty = 1, grid.lwd = 1, axes = TRUE,
-          xlim = NULL, ylim = NULL, lwd = 1, lwd.axis = 1, lwd.ticks = lwd.axis, xaxs="i", yaxs = "i",
-          ...)
+          xlim = NULL, ylim = NULL, lwd = 2, lwd.axis = 1, lwd.ticks = lwd.axis, xaxs="i", yaxs = "i",
+          pch = 16, col = '#592C88', ...)
 {
   if (class(x)[1] == "histogram") {
     dots = list(...)
-    do.call("maghist", c(list(x = x, xlim = xlim, ylim = ylim,
+    do.call("magicaxis::maghist", c(list(x = x, xlim = xlim, ylim = ylim,
                               log = log, side = side, majorn = majorn, minorn = minorn,
                               tcl = tcl, ratio = ratio, labels = labels, mgp = mgp,
                               mtline = mtline, xlab = xlab, ylab = ylab, crunch = crunch,
@@ -35,7 +34,7 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
                 "yx") {
               sel = sel & x[, 1] > 0
             }
-            xlim = magclip(x[sel, 1], sigma = xlim)$range
+            xlim = magicaxis::magclip(x[sel, 1], sigma = xlim)$range
           }
           if (length(ylim) == 1) {
             sel = !is.na(x[, 2]) & !is.nan(x[, 2]) &
@@ -44,13 +43,13 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
                 "yx") {
               sel = sel & x[, 2] > 0
             }
-            ylim = magclip(x[sel, 2], sigma = ylim)$range
+            ylim = magicaxis::magclip(x[sel, 2], sigma = ylim)$range
           }
-          plot(x = x, axes = FALSE, xlab = "", ylab = "", xaxs="i", yaxs = "i",
+          plot(x = x, axes = FALSE, xlab = "", ylab = "",
                main = main, log = log, frame.plot = FALSE,
                panel.first = if (side[1] != FALSE | axes ==
                                  FALSE) {
-                 magaxis(side = side, majorn = majorn, minorn = minorn,
+                 magicaxis::magaxis(side = side, majorn = majorn, minorn = minorn,
                          tcl = tcl, ratio = ratio, labels = labels,
                          unlog = unlog, mgp = mgp, mtline = mtline,
                          xlab = xlab, ylab = ylab, crunch = crunch,
@@ -60,15 +59,15 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
                          grid = grid, grid.col = grid.col, grid.lty = grid.lty,
                          grid.lwd = grid.lwd, lwd.axis = lwd.axis,
                          lwd.ticks = lwd.ticks, ...)
-               }, lwd = lwd, xlim = xlim, ylim = ylim, ...)
+               }, lwd = lwd, xlim = xlim, ylim = ylim, pch = pch, col = col, xaxs="i", yaxs = "i", ...)
         }
       }
       else {
-        plot(x = x, axes = FALSE, xlab = "", ylab = "",
-             main = main, log = log, frame.plot = FALSE, xaxs="i", yaxs = "i",
+        plot(x = x, axes = FALSE, xlab = "", ylab = "", pch = 16, xaxs="i", yaxs = "i",
+             main = main, log = log, frame.plot = FALSE,
              panel.first = if (side[1] != FALSE | axes ==
                                FALSE) {
-               magaxis(side = side, majorn = majorn, minorn = minorn,
+               magicaxis::magaxis(side = side, majorn = majorn, minorn = minorn,
                        tcl = tcl, ratio = ratio, labels = labels,
                        unlog = unlog, mgp = mgp, mtline = mtline,
                        xlab = xlab, ylab = ylab, crunch = crunch,
@@ -78,7 +77,7 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
                        grid = grid, grid.col = grid.col, grid.lty = grid.lty,
                        grid.lwd = grid.lwd, lwd.axis = lwd.axis,
                        lwd.ticks = lwd.ticks, ...)
-             }, lwd = lwd, xlim = xlim, ylim = ylim, ...)
+             }, lwd = lwd, xlim = xlim, ylim = ylim, pch = pch, col = col, ...)
       }
     }
     else {
@@ -89,7 +88,7 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
             "yx") {
           sel = sel & x > 0
         }
-        xlim = magclip(x[sel], sigma = xlim)$range
+        xlim = magicaxis::magclip(x[sel], sigma = xlim)$range
       }
       if (length(ylim) == 1) {
         sel = !is.na(y) & !is.nan(y) & !is.null(y) &
@@ -98,12 +97,12 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
             "yx") {
           sel = sel & y > 0
         }
-        ylim = magclip(y[sel], sigma = ylim)$range
+        ylim = magicaxis::magclip(y[sel], sigma = ylim)$range
       }
       plot(x = x, y = y, axes = FALSE, xlab = "", ylab = "", xaxs="i", yaxs = "i",
            main = main, log = log, frame.plot = FALSE, panel.first = if (side[1] !=
                                                                          FALSE | axes == FALSE) {
-             magaxis(side = side, majorn = majorn, minorn = minorn,
+             magicaxis::magaxis(side = side, majorn = majorn, minorn = minorn,
                      tcl = tcl, ratio = ratio, labels = labels,
                      unlog = unlog, mgp = mgp, mtline = mtline,
                      xlab = xlab, ylab = ylab, crunch = crunch,
@@ -113,7 +112,7 @@ chemplot <- function (x, y, log = "", main = "", side = 1:2, majorn = 5,
                      grid = grid, grid.col = grid.col, grid.lty = grid.lty,
                      grid.lwd = grid.lwd, lwd.axis = lwd.axis,
                      lwd.ticks = lwd.ticks, ...)
-           }, lwd = lwd, xlim = xlim, ylim = ylim, ...)
+           }, lwd = lwd, xlim = xlim, ylim = ylim, pch = pch, col = col, ...)
     }
   }
 }
