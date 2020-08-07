@@ -1,5 +1,5 @@
 ---
-title: "Lab X: Title"
+title: "Lab 1: Title"
 author: 
 output:
   html_document:
@@ -20,3 +20,4 @@ etc.
 ## Conclusions
 
 ## References
+
