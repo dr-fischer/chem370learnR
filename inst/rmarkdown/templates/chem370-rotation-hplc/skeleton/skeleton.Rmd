@@ -1,0 +1,100 @@
+---
+title: "Lab X: Title"
+author: 
+output:
+  html_document:
+    fig_caption: true
+---
+
+## Introduction
+
+## Materials and Methods
+
+1. Step 1
+1. Step 2
+
+etc.
+
+## Results and Data Analysis
+
+## Conclusions
+
+## References
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is $R^2$ value for your calibration curve?  Call the variable `r2`.
+
+```{r question-1, purl = TRUE}
+r2 <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is sensitivity factor?  Call the variable `m`.
+
+```{r question-2, purl = TRUE}
+m <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is mean measured analyte concentration for the QC in mg/L?  Call the variable `qc_conc`.
+
+```{r question-3, purl = TRUE}
+qc_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the expected analyte concentration for the QC in mg/L?  Call the variable `qc_expected`.
+
+```{r question-4, purl = TRUE}
+qc_expected <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: My QC passes at the 95% confidence level.  Save your `TRUE` or `FALSE` answer as `qc_passfail`.
+
+```{r question-5, purl = TRUE}
+passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. What is mean analyte concentration for sample 1 in mg/L?  Call the variable `s1_conc`.
+
+```{r question-6, purl = TRUE}
+s1_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+7. What is mean analyte concentration for sample 2 in mg/L?  Call the variable `s2_conc`.
+
+```{r question-7, purl = TRUE}
+s2_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+8. What is the 95% CI for sample 1 in mg/L?  Call the variable `s1_ci`.
+
+```{r question-8, purl = TRUE}
+s1_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+9. What is the 95% CI for sample 2 in mg/L?  Call the variable `s2_ci`.
+
+```{r question-9, purl = TRUE}
+s2_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+10. TRUE or FALSE: The concentration of Sample 1 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s1_passfail`.
+
+```{r question-10, purl = TRUE}
+s1_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+11. TRUE or FALSE: The concentration of Sample 2 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s2_passfail`.
+
+```{r question-11, purl = TRUE}
+s2_passfail <- FALSE     # put your answer between the '<-' and '#'
+```

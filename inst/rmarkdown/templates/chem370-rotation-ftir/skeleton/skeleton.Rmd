@@ -1,0 +1,70 @@
+---
+title: "Lab X: Title"
+author: 
+output:
+  html_document:
+    fig_caption: true
+---
+
+## Introduction
+
+## Materials and Methods
+
+1. Step 1
+1. Step 2
+
+etc.
+
+## Results and Data Analysis
+
+## Conclusions
+
+## References
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the unique ID (UID) value for Sample 1?  Call the variable `s1_uid`.
+
+```{r question-1, purl = TRUE}
+s1_uid <- 0     # put your answer between the '<-' and '#'
+```
+
+1. What is the unique ID (UID) value for Sample 2?  Call the variable `s2_uid`.
+
+```{r question-1, purl = TRUE}
+s2_uid <- 0     # put your answer between the '<-' and '#'
+```
+
+1. What is the hit quality index (HQI) value for Sample 1?  Call the variable `s1_hqi`.
+
+```{r question-1, purl = TRUE}
+s1_hqi <- 0     # put your answer between the '<-' and '#'
+```
+
+1. What is the hit quality index (HQI) value for Sample 2?  Call the variable `s2_hqi`.
+
+```{r question-1, purl = TRUE}
+s2_hqi <- 0     # put your answer between the '<-' and '#'
+```
+
+1. TRUE or FALSE: Sample 1 shows signs of contamination.  Save your `TRUE` or `FALSE` answer as `s1_passfail`.
+
+```{r question-1, purl = TRUE}
+s1_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+1. TRUE or FALSE: Sample 2 shows signs of contamination.  Save your `TRUE` or `FALSE` answer as `s2_passfail`.
+
+```{r question-1, purl = TRUE}
+s2_passfail <- TRUE     # put your answer between the '<-' and '#'
+```
