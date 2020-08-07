@@ -1,0 +1,94 @@
+---
+title: "Lab X: Title"
+author: 
+output:
+  html_document:
+    fig_caption: true
+---
+
+## Introduction
+
+## Materials and Methods
+
+1. Step 1
+1. Step 2
+
+etc.
+
+## Results and Data Analysis
+
+## Conclusions
+
+## References
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the quinine concentration in your sample, in mg/L?  Call the variable `quinine`.
+
+```{r question-1, purl = TRUE}
+quinine <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is the 95% confidence interval (CI) for quinine concentration in your sample, in mg/L?  Call the variable `quinine_ci`.
+
+```{r question-2, purl = TRUE}
+quinine_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is the quinine concentration in your QC, in mg/L?  Call the variable `quinine_qc`.
+
+```{r question-3, purl = TRUE}
+quinine_qc <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the 95% confidence interval (CI) for quinine concentration in your QC, in mg/L?  Call the variable `quinine_qc_ci`.
+
+```{r question-4, purl = TRUE}
+quinine_qc_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+5. What is the *expected* concentration for your qc, in mg/L?  Call it `qc_expected`.
+
+```{r question-5, purl = TRUE}
+qc_expected <- 0     # put your answer between the '<-' and '#'
+```
+
+6. TRUE or FALSE: My QC passes.  Answer `TRUE` or `FALSE` in the variable `qc_pass`.
+
+```{r question-6, purl = TRUE}
+qc_pass <- FALSE     # put your answer between the '<-' and '#'
+```
+
+7. What is your sensitivity factor?  Call it `m`.
+
+```{r question-7, purl = TRUE}
+m <- 0     # put your answer between the '<-' and '#'
+```
+
+8. What is the $R^2$ value for your calibration curve? Call it `r2`.
+
+```{r question-8, purl = TRUE}
+r2 <- 0     # put your answer between the '<-' and '#'
+```
+
+9. What is your limit of detection for quinine (LOD), in mg/L.  Call it `lod`.
+
+```{r question-9, purl = TRUE}
+lod <- 0     # put your answer between the '<-' and '#'
+```
+
+10. What is your limit of quantitation for quinine (LOQ), in mg/L.  Call it `loq`.
+
+```{r question-10, purl = TRUE}
+loq <- 0     # put your answer between the '<-' and '#'
+```
