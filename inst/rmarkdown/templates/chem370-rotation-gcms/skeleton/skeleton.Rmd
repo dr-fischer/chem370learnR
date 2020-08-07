@@ -1,0 +1,79 @@
+---
+title: "Lab X: Title"
+author: 
+output:
+  html_document:
+    fig_caption: true
+---
+
+## Introduction
+
+## Materials and Methods
+
+1. Step 1
+1. Step 2
+
+etc.
+
+## Results and Data Analysis
+
+## Conclusions
+
+## References
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+## Assessment
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the mass-to-charge ratio of the base peak in your spectrum?  Call the variable `base`.
+
+```{r question-1, purl = TRUE}
+base <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is the mass-to-charge ratio of the molecular ion?  Call the variable `molion`.
+
+```{r question-2, purl = TRUE}
+molion <- 0     # put your answer between the '<-' and '#'
+```
+
+3. How many C atoms are present in your sample?  Call the variable `catoms`.
+
+```{r question-3, purl = TRUE}
+catoms <- 0     # put your answer between the '<-' and '#'
+```
+
+4. How many rings and/or double bonds are present in your sample? Call the variable `rdb`.
+
+```{r question-4, purl = TRUE}
+rdb <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: My molecule contains an EVEN number of N atoms.  Answer `TRUE` or `FALSE` in the variable `oddeven`.
+
+```{r question-5, purl = TRUE}
+oddeven <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. What is the monoisotopic molecular weight of your molecule? Call the variable `molwt`.
+
+```{r question-6, purl = TRUE}
+molwt <- 0     # put your answer between the '<-' and '#'
+```
+
+7. Propose a formula for your molecule.  Use the variables `c` for number carbon atoms, `h` for number of hydrogen, `o` for oxygen, and `n` for nitrogen.  Your sample will not contain atoms other than these for this lab activity.
+
+```{r question-7, purl = TRUE}
+c <- 0     # put your answer between the '<-' and '#'
+h <- 0     # put your answer between the '<-' and '#'
+o <- 0     # put your answer between the '<-' and '#'
+n <- 0     # put your answer between the '<-' and '#'
+```
