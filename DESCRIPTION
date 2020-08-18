@@ -3,8 +3,8 @@ Type: Package
 Title: Notebook templates and function for CHEM370: Instrumental Analysis I
 Version: 0.1.0
 Author: Al Fischer
-Imports: graphics, grDevices, stats
-Depends: areaplot, magicaxis, pracma, learnr, gradethis, rticles
+Imports: graphics, grDevices, stats, learnr
+Depends: areaplot, magicaxis, pracma, gradethis, rticles
 Suggests: MASS
 Maintainer: Al Fischer <dfischer@wcu.edu>
 Description: The package is meant to be used by the students of CHEM370: Instrumental Analysis I at Western Carolina University.

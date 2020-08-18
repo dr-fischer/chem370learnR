@@ -6,7 +6,7 @@ output:
     fig_caption: true
 ---
 
-```{r, echo = FALSE}
+```{r echo = FALSE, include=FALSE}
 #### Leave this chunk alone.
 #### It updates the the instRumental package when you run the template.
 #### It also loads the package
