@@ -6,6 +6,15 @@ output:
     fig_caption: true
 ---
 
+```{r, echo = FALSE}
+#### Leave this chunk alone.
+#### It updates the the instRumental package when you run the template.
+#### It also loads the package
+library(devtools)
+install_github("dr-fischer/instRumental")
+library(instRumental)
+```
+
 ## Introduction
 
 ## Materials and Methods
