@@ -3,7 +3,7 @@ Type: Package
 Title: Notebook templates and function for CHEM370: Instrumental Analysis I
 Version: 0.1.0
 Author: Al Fischer
-Imports: graphics, grDevices, stats, learnr
+Imports: graphics, grDevices, stats
 Depends: areaplot, magicaxis, pracma, gradethis, rticles
 Suggests: MASS
 Maintainer: Al Fischer <dfischer@wcu.edu>
