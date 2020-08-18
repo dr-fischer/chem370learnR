@@ -44,60 +44,90 @@ Each question is worth 1 point.  You must get the question *exactly* right to ge
 
 1. What is your sample ID?  Call it `ID`.
 
-```{r question-1, purl = TRUE}
-ID <- "Sample A"  # Delete sample A and insert your sample name.  Leave the quotes.
+```{r question-gc-1, purl = TRUE}
+ID <- "Sample Z"  # Delete sample Z and insert your sample name.  Leave the quotes.
 ```
 
-2. Which instrument did you use, the 150 or 400?  Save your answer as the variable `instrument`.
+2. What is the *retention time* of the solvent for the blank on the GC-400, in minutes? Save your answer as `solventPeak.blank`
 
-```{r question-2, purl = TRUE}
-instrument <- 0     # put your answer between the '<-' and '#'
+```{r question-gc-2, purl = TRUE}
+solventPeak.blank <- 0    # put your answer between the '<-' and '#'
 ```
 
-3. How many compounds are in your sample.  Save your answer as the variable `noCompounds`.
+3. What is the retention time of the *solvent peak* in the sample for the GC-400?  Specify by it's retention time and save your answer as `solventPeak.sample`
 
-```{r question-3, purl = TRUE}
+```{r question-gc-3, purl = TRUE}
+solventPeak.sample <- 0    # put your answer between the '<-' and '#'
+```
+
+4. Does the retention time exactly agree for the blank and the sample?  Write "yes" or "no" and save the answer as `solventPeak.agree`.
+
+```{r question-gc-4, purl = TRUE}
+solventPeak.agree <- "no"    # put your answer inside the quotes, and make sure to leave the quotes
+```
+
+5. Assuming the peaks do not *exactly* agree, what is the dominant type of error causing the disagreement?  Save the answer as `solventPeak.error`.
+
+```{r question-gc-5, purl = TRUE}
+solventPeak.error <- "type"    # put your answer inside the quotes, and make sure to leave the quotes
+```
+
+6. How many compounds are in your sample, not including the solvent?  Save your answer as the variable `noCompounds`.
+
+```{r question-gc-6, purl = TRUE}
 noCompounds <- 0    # put your answer between the '<-' and '#'
 ```
 
-4. What is the percent composition for least polar compound, as a percentage (%)?  Provide your answer as the variable `leastPolarPercent`.
+7. What is the percent composition for least polar compound, as a percentage (%), for the GC-400?  Provide your answer as the variable `leastPolarPercent`.
 
-```{r question-4, purl = TRUE}
-leastPolarPercent <- 0     # put your answer between the '<-' and '#'
+```{r question-gc-7, purl = TRUE}
+leastPolarPercent <- 0    # put your answer between the '<-' and '#'
 ```
 
-5. What is the percent composition for least polar compound, as a percentage (%)?  Provide your answer as the variable `mostPolarPercent`.
+8. What is the percent composition for most polar compound, as a percentage (%), for the GC-400?  Provide your answer as the variable `mostPolarPercent`.
 
-```{r question-5, purl = TRUE}
-leastPolarPercent <- 0     # put your answer between the '<-' and '#'
+```{r question-gc-8, purl = TRUE}
+mostPolarPercent <- 0    # put your answer between the '<-' and '#'
 ```
 
-6. What is the standard deviation of the baseline, in millivolts (mV)?  Provide your answer as the variable `baselineSD`.
+9. What is the range of the baseline values, in millivolts (mV), for the GC-400?  Provide your answer as the variable `baselineRange.400`.
 
-```{r question-6, purl = TRUE}
-baselineSD <- 0    # put your answer between the '<-' and '#'
+```{r question-gc-9, purl = TRUE}
+baselineRange.400 <- 0    # put your answer between the '<-' and '#'
 ```
 
-7. What is the signal level for Peak 1, in millivolts (mV)?  Provide your answer as the variable `peak1`.
+10. What is the signal level for the tallest peak, in millivolts (mV), for the GC-400?  Provide your answer as the variable `signal.400`.
 
-```{r question-7, purl = TRUE}
-peak1 <- 0     # put your answer between the '<-' and '#'
+```{r question-gc-10, purl = TRUE}
+signal.400 <- 0    # put your answer between the '<-' and '#'
 ```
 
-8. What is the signal level for Peak 1, in millivolts (mV)?  Provide your answer as the variable `peak2`.
+11. What is the signal to noise ratio for the tallest peak in the GC-400?  Provide your answer as the variable `sn.400`.
 
-```{r question-8, purl = TRUE}
-peak2 <- 0    # put your answer between the '<-' and '#'
+```{r question-gc-11, purl = TRUE}
+sn.400 <- 0    # put your answer between the '<-' and '#'
 ```
 
-9. What is the signal to noise ratio for Peak 1?  Provide your answer as the variable `peak1_sn`.
+12. What is the standard deviation of the baseline, in millivolts (mV), for the GC-150?  Provide your answer as the variable `baselineSD.150`.
 
-```{r question-9, purl = TRUE}
-peak1_sn <- 0    # put your answer between the '<-' and '#'
+```{r question-gc-12, purl = TRUE}
+baselineSD.150 <- 0    # put your answer between the '<-' and '#'
 ```
 
-10. What is the signal to noise ratio for Peak 1?  Provide your answer as the variable `peak2_sn`.
+13. What is the signal level for the tallest peak, in millivolts (mV), for the GC-150?  Provide your answer as the variable `signal.150`.
 
-```{r question-10, purl = TRUE}
-peak2_sn <- 0     # put your answer between the '<-' and '#'
+```{r question-gc-13, purl = TRUE}
+signal.150 <- 0    # put your answer between the '<-' and '#'
+```
+
+14. What is the signal to noise ratio for the tallest peak in the GC-150?  Provide your answer as the variable `sn.150`.
+
+```{r question-gc-14, purl = TRUE}
+sn.150 <- 0    # put your answer between the '<-' and '#'
+```
+
+15. Are the retention times the same or different on each instrument?  Are the peaks separated better on one instrument than another?  Propose some ideas as to why.  Provide your answer as the variable `differences`.
+
+```{r question-gc-15, purl = TRUE}
+differences <- "The retention times are exactly the same."    # put your answer between the '<-' and '#'
 ```
